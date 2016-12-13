@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="peopleViewModel"
+            type="com.techdb.people_mvvm.viewmodel.ItemPeopleViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/item_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_large">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_people"
+            android:layout_width="@dimen/people_circle_image_view_size"
+            android:layout_height="@dimen/people_circle_image_view_size"
+            android:onClick="@{peopleViewModel::onItemClick}"
+            tools:imageUrl="@{peopleViewModel.pictureProfile}"
+            />
+
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@dimen/spacing_large"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_toEndOf="@id/image_people"
+            android:text="@{peopleViewModel.fullName}"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="@dimen/size_16sp"
+            android:textStyle="bold"
+            tools:text="Mr Gary Allens"
+            />
+
+        <TextView
+            android:id="@+id/label_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/label_name"
+            android:layout_below="@+id/label_name"
+            android:text="@{peopleViewModel.cell}"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="@dimen/size_14sp"
+            tools:text="0124534-343-3533"/>
+
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/label_phone"
+            android:layout_below="@+id/label_phone"
+            android:text="@{peopleViewModel.email}"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="@dimen/size_14sp"
+            tools:text="gary.allens@yahoo.com"/>
+    </RelativeLayout>
+</layout>

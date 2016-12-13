@@ -1,0 +1,14 @@
+ext {
+    supportVersion = '25.0.1'
+    retrofitVersion = '2.1.0'
+
+    rxJavaVersion = '1.2.2'
+    rxAndroidVersion = '1.2.1'
+
+    butterKnifeVersion = '8.4.0'
+    glideVersion = '3.7.0'
+
+    circleImageVersion = '2.1.0'
+
+    junitVersion = '4.12'
+}
