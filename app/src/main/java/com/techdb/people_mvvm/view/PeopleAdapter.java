@@ -28,7 +28,8 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleAdap
 
     @Override
     public PeopleAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ItemPeopleBinding itemPeopleBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_people, parent, false);
+        ItemPeopleBinding itemPeopleBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
+            R.layout.item_people, parent, false);
 
         return new PeopleAdapterViewHolder(itemPeopleBinding);
     }
@@ -62,6 +63,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleAdap
             } else {
                 mItemPeopleBinding.getPeopleViewModel().setPeople(people);
             }
+            mItemPeopleBinding.executePendingBindings();
         }
     }
 }

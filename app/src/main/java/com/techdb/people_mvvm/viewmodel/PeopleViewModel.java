@@ -57,7 +57,7 @@ public class PeopleViewModel implements PeopleViewModelContract.ViewModel {
         unSubscribeFromObservable();
         PeopleApp app = PeopleApp.create(mContext);
         PeopleService peopleService = app.getPeopleService();
-        mSubscription = peopleService.fetchPeole(10, "en")
+        mSubscription = peopleService.fetchPeople(10, "en")
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(app.subscribleScheduler())
                 .subscribe(new Action1<PeopleResponse>() {

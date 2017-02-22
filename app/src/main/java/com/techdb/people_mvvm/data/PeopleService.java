@@ -11,5 +11,5 @@ import rx.Observable;
 public interface PeopleService {
 
     @GET("/")
-    Observable<PeopleResponse> fetchPeole(@Query("results") int numberResult, @Query("nat") String position);
+    Observable<PeopleResponse> fetchPeople(@Query("results") int numberResult, @Query("nat") String position);
 }

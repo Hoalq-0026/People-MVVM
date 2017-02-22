@@ -54,6 +54,13 @@ public class PeopleDetailActivity extends AppCompatActivity implements PeopleDet
         }
     }
 
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     @Override
     public Context getContext() {
         return null;

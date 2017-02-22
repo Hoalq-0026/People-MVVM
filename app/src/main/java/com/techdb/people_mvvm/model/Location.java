@@ -19,7 +19,7 @@ public class Location implements Serializable {
     @SerializedName("state")
     public String state;
 
-    @SerializedName("zip")
+    @SerializedName("postcode")
     public String zip;
 
 
