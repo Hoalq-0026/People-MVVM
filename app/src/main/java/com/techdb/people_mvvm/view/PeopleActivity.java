@@ -85,6 +85,6 @@ public class PeopleActivity extends AppCompatActivity implements PeopleViewModel
     }
 
     private void startActivityActionView() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/LarryPham")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/lequanghoa/People-MVVM")));
     }
 }
